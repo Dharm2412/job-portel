@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 
+// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyD0NAOfuGHY_kzfZPT9dFFyu7y5beCc7GU",
   authDomain: "job-portel-bee19.firebaseapp.com",
@@ -17,9 +18,11 @@ const firebaseConfig = {
   appId: "1:972475632209:web:89bf376564eda5c9b8c670",
 };
 
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
+// Login Component
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -46,7 +49,13 @@ export default function Login() {
       })
       .catch((error) => {
         console.error("Login error:", error.code, error.message);
-        alert(`Login failed: ${error.message}`);
+        if (error.code === "auth/invalid-credential") {
+          alert(
+            "Login failed: Invalid credentials. Please check your email and password."
+          );
+        } else {
+          alert(`Login failed: ${error.message}`);
+        }
       });
   };
 
@@ -135,7 +144,6 @@ export default function Login() {
   c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"
               ></path>
             </svg>
-
             <span>Log in with Google</span>
           </div>
         </div>

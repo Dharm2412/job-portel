@@ -49,7 +49,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/health">
+              <Link className="nav-link" to="/postedjobs">
                 Posted Jobs
               </Link>
             </li>

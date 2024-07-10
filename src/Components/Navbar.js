@@ -1,13 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { getAuth, signOut } from "firebase/auth";
 
 const Navbar = () => {
-  const handleLoginClick = () => {
-    window.location.href = '/register';
+  const [user, setUser] = useState(null);
+  const auth = getAuth();
+  const navigate = useNavigate(); // Use navigate hook
+
+  useEffect(() => {
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      if (user) {
+        setUser(user);
+      } else {
+        setUser(null);
+      }
+    });
+    return () => unsubscribe();
+  }, [auth]);
+
+  const handleLogoutClick = () => {
+    signOut(auth)
+      .then(() => {
+        alert("Logout successful");
+        setUser(null);
+        navigate("/login"); // Navigate to login page after logout
+      })
+      .catch((error) => {
+        console.error("Logout error:", error);
+        alert(`Logout failed: ${error.message}`);
+      });
   };
-    const handleSignClick = () => {
-      window.location.href = "/login";
-    };
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
@@ -66,12 +88,33 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="btnn">
-          <button className="btn " onClick={handleSignClick}>
-            LOGIN
-          </button>
-          <button className="btn " onClick={handleLoginClick}>
-            REGISTER
-          </button>
+          {user ? (
+            <>
+              <button
+                className="btn btn-outline-light"
+                onClick={handleLogoutClick}
+              >
+                <span className="navbar-text me-3">
+                  &larr; {user.displayName || user.email}
+                </span>
+              </button>
+            </>
+          ) : (
+            <>
+              <button
+                className="btn btn-outline-light me-2"
+                onClick={() => navigate("/login")} // Use navigate to go to login page
+              >
+                LOGIN
+              </button>
+              <button
+                className="btn btn-outline-light"
+                onClick={() => navigate("/register")} // Use navigate to go to register page
+              >
+                REGISTER
+              </button>
+            </>
+          )}
         </div>
       </div>
     </nav>

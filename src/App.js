@@ -9,14 +9,26 @@ import Navbar from "./Components/Navbar";
 import Login from "./Components/Login";
 import Register from "./Components/Register";
 import Home from "./Components/Home";
-import Contect from "./Components/Contect";
+import Contect from "./Components/Contect"; // Correct import path
 import Post_jobs from "./Components/Post_jobs";
 import Viewjobs from "./Components/View-jobs";
 import Details from "./Components/Details";
 import Postedjobs from "./Components/Postedjobs";
 
-
 const App = () => {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Example: Check if user is logged in (using Firebase auth, for instance)
+    // Replace with your own authentication check logic
+    const isLoggedIn = /* Check if user is logged in */ true;
+
+    if (isLoggedIn) {
+      setUser({}); // Set your user state accordingly
+    } else {
+      setUser(null);
+    }
+  }, []);
 
   return (
     <Router>
@@ -29,7 +41,11 @@ const App = () => {
         <Route exact path="/contect" element={<Contect />} />
         <Route exact path="/details" element={<Details />} />
         <Route exact path="/view-jobs" element={<Viewjobs />} />
-        <Route exact path="/postedjobs" element={<Postedjobs />} />
+        <Route
+          exact
+          path="/postedjobs"
+          element={user ? <Postedjobs /> : <Navigate to="/login" />}
+        />
       </Routes>
     </Router>
   );

@@ -23,7 +23,7 @@ const Navbar = () => {
       .then(() => {
         alert("Logout successful");
         setUser(null);
-        navigate("/login"); // Navigate to login page after logout
+        navigate("/"); // Navigate to login page after logout
       })
       .catch((error) => {
         console.error("Logout error:", error);

@@ -5,7 +5,10 @@ export default function Socialmedia() {
   return (
     <div>
       <div className="social-buttons">
-        <a href="/" className="social-button github">
+        <a
+          href="https://github.com/Dharm2412/job-portel"
+          className="social-button github"
+        >
           <svg
             className="cf-icon-svg"
             xmlns="http://www.w3.org/2000/svg"

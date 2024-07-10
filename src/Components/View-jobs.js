@@ -24,8 +24,10 @@ export default function Viewjobs() {
   }, []);
 
   return (
-    <div>
-      <div className="header text-center">AVAILABLE JOBS</div>
+    <div className="card-main text-center">
+      <div className="header text-center my-3">
+        <h1 className="view-header">AVAILABLE JOBS</h1>
+      </div>
       <div className="card-main text-center">
         {loading ? (
           <Loader />

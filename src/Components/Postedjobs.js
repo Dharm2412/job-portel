@@ -24,6 +24,9 @@ export default function Postedjobs() {
 
  return (
    <div className="card-main text-center">
+     <div className="header text-center my-3">
+       <h1 className="view-header">POSTED JOBS</h1>
+     </div>
      {loading ? (
        <Loader />
      ) : (

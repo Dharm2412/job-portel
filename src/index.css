@@ -434,3 +434,26 @@ body, html {
 .comtect-me{
   padding: 50px;
 }
+.header {
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.view-header {
+  display: inline-block;
+  position: relative;
+  font-size: 2rem; /* Adjust the font size as needed */
+  font-weight: bold; /* Adjust the font weight as needed */
+  padding-bottom: 0.5rem; /* Adjust the padding as needed */
+}
+
+.view-header::after {
+  content: '';
+  display: block;
+  width: 50%; /* Adjust the width of the underline as needed */
+  height: 4px; /* Adjust the thickness of the underline as needed */
+  background-color: purple; /* Set the color of the underline to purple */
+  margin: 0.5rem auto 0; /* Adjust the margin as needed */
+}

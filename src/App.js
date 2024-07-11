@@ -14,7 +14,6 @@ import Post_jobs from "./Components/Post_jobs";
 import Viewjobs from "./Components/View-jobs";
 import JobDetails from "./Components/Jobdetails";
 import Postedjobs from "./Components/Postedjobs";
-import Applynow from "./Components/Applynow";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase } from "firebase/database";
@@ -69,7 +68,6 @@ const App = () => {
           path="/postedjobs"
           element={user ? <Postedjobs /> : <Navigate to="/login" />}
         />
-        <Route path="/details/:id/uploadcv" element={<Applynow />} />
       </Routes>
     </Router>
   );

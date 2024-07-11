@@ -83,9 +83,13 @@ export default function Postedjobs() {
                        <Button
                          variant="outline-primary"
                          className="py-1 px-2 border transition-all duration-700"
-                         style={{ fontSize: "0.8rem" }}
+                         style={{
+                           height: "50px",
+                           width: "200px",
+                           fontSize: "15px",
+                         }}
                        >
-                         View Detail <i className="bi bi-arrow-right"></i>
+                         View Detail &rarr;
                        </Button>
                      </Link>
                    </Col>

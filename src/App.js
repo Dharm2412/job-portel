@@ -12,8 +12,9 @@ import Home from "./Components/Home";
 import Contect from "./Components/Contect";
 import Post_jobs from "./Components/Post_jobs";
 import Viewjobs from "./Components/View-jobs";
-import Details from "./Components/Details";
+import JobDetails from "./Components/Jobdetails";
 import Postedjobs from "./Components/Postedjobs";
+import Applynow from "./Components/Applynow";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase } from "firebase/database";
@@ -54,22 +55,21 @@ const App = () => {
     <Router>
       <Navbar />
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/login" element={<Login />} />
-        <Route exact path="/register" element={<Register />} />
-        <Route exact path="/post-jobs" element={<Post_jobs />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/post-jobs" element={<Post_jobs />} />
         <Route
-          exact
           path="/contect"
           element={user ? <Contect /> : <Navigate to="/login" />}
         />
-        <Route exact path="/details" element={<Details />} />
-        <Route exact path="/view-jobs" element={<Viewjobs />} />
+        <Route path="/details/:id" element={<JobDetails />} />
+        <Route path="/view-jobs" element={<Viewjobs />} />
         <Route
-          exact
           path="/postedjobs"
           element={user ? <Postedjobs /> : <Navigate to="/login" />}
         />
+        <Route path="/details/:id/uploadcv" element={<Applynow />} />
       </Routes>
     </Router>
   );

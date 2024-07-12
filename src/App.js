@@ -18,6 +18,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase } from "firebase/database";
 import Applynow from "./Components/Applynow";
+import Footer from "./Components/Footer";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -77,6 +78,7 @@ const App = () => {
         />
         <Route path="/apply/:id" element={<Applynow />} />
       </Routes>
+      <Footer/>
     </Router>
   );
 };

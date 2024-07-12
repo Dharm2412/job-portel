@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { database } from "./firebase";
+import { database } from "../firebase";
 import { ref, onValue } from "firebase/database";
 import { Card, Button, Image, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";

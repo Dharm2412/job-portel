@@ -76,11 +76,6 @@ const Navbar = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/science">
-                Dashboard
-              </Link>
-            </li>
-            <li className="nav-item">
               <Link className="nav-link" to="/contect">
                 Contect
               </Link>

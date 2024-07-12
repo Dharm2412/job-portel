@@ -17,6 +17,7 @@ import Postedjobs from "./Components/Postedjobs";
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { getDatabase } from "firebase/database";
+import Applynow from "./Components/Applynow";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -68,6 +69,7 @@ const App = () => {
           path="/postedjobs"
           element={user ? <Postedjobs /> : <Navigate to="/login" />}
         />
+        <Route path="/apply/:id" element={<Applynow />} />
       </Routes>
     </Router>
   );

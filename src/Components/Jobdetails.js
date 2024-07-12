@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { database } from "./firebase";
 import { ref, onValue } from "firebase/database";
 import { Card, Image, Button, Container, Row, Col } from "react-bootstrap";
 import Loader from "./Loader";
+import { database } from "../firebase"; // Adjust the path as necessary
 
 const JobDetails = () => {
   const { id } = useParams();
@@ -85,13 +85,10 @@ const JobDetails = () => {
               </Col>
             </Row>
           </div>
-          <Button variant="primary" onClick={() => window.history.back()}>
+          <Button variant="primary" onClick={() => navigate(-1)}>
             Back
           </Button>
-          <Button
-            variant="success"
-            onClick={() => navigate(`/details/${id}/uploadcv`)}
-          >
+          <Button variant="success" onClick={() => navigate(`/apply/${id}`)}>
             Apply now
           </Button>
         </Card.Body>

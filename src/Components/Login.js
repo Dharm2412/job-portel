@@ -24,8 +24,8 @@ const auth = getAuth(app);
 
 // Login Component
 export default function Login() {
-  const [email, setEmail] = useState("Dharm@gmail.com");
-  const [password, setPassword] = useState("Dharmpatel");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const provider = new GoogleAuthProvider();
 
   const googleSignIn = () => {
@@ -70,7 +70,7 @@ export default function Login() {
             className="input"
             placeholder="Email"
             onChange={(e) => setEmail(e.target.value)}
-            value={"Dharm@gmail.com"}
+            value={""}
           />
           <input
             type="password"
@@ -78,7 +78,7 @@ export default function Login() {
             className="input"
             placeholder="Password"
             onChange={(e) => setPassword(e.target.value)}
-            value={"Dharmpatel"}
+            value={""}
           />
           <p className="page-link">
             <span className="page-link-label">Forgot Password?</span>

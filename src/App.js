@@ -58,13 +58,19 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/post-jobs" element={<Post_jobs />} />
+        <Route
+          path="/post-jobs"
+          element={user ? <Post_jobs /> : <Navigate to="/login" />}
+        />
         <Route
           path="/contect"
           element={user ? <Contect /> : <Navigate to="/login" />}
         />
         <Route path="/details/:id" element={<JobDetails />} />
-        <Route path="/view-jobs" element={<Viewjobs />} />
+        <Route
+          path="/view-jobs"
+          element={user ? <Viewjobs /> : <Navigate to="/login" />}
+        />
         <Route
           path="/postedjobs"
           element={user ? <Postedjobs /> : <Navigate to="/login" />}

@@ -6,6 +6,7 @@ import {
   GoogleAuthProvider,
 } from "firebase/auth";
 import { initializeApp } from "firebase/app";
+import { useNavigate } from "react-router-dom";
 
 const firebaseConfig = {
   apiKey: "AIzaSyD0NAOfuGHY_kzfZPT9dFFyu7y5beCc7GU",
@@ -22,6 +23,7 @@ const auth = getAuth(app);
 export default function Register() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
   const provider = new GoogleAuthProvider();
 
   const googleSignIn = () => {
@@ -29,6 +31,7 @@ export default function Register() {
       .then((result) => {
         console.log("Google sign-in successful:", result.user.email);
         alert("Google sign-in successful: " + result.user.email);
+        navigate("/");
       })
       .catch((error) => {
         console.error("Google sign-in error:", error.code, error.message);
@@ -42,6 +45,7 @@ export default function Register() {
       .then((userCredential) => {
         console.log("User registered:", userCredential.user.email);
         alert("Registration successful");
+        navigate("/");
       })
       .catch((error) => {
         console.error("Registration error:", error.code, error.message);

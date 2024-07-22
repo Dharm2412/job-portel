@@ -1,76 +1,92 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Job portel
 
-## Available Scripts
+Job Portel is a web application designed to streamline the job application process. Created by Dharm, this platform allows users to easily apply for jobs, post job listings, and create detailed resume descriptions. It also features a chatbot to assist users with their job search and application process, offering guidance and support throughout their journey. This project is ideal for job seekers, employers, and anyone looking to manage job applications efficiently.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Install my-project with npm
 
-### `npm run eject`
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Deployment
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+To deploy this project run
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  npm run start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Contributing
 
-## Learn More
+Contributions are always welcome!
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+See `contributing.md` for ways to get started.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Please adhere to this project's `code of conduct`.
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Screenshots
 
-### Analyzing the Bundle Size
+![Screenshot 2024-07-22 231924](https://github.com/user-attachments/assets/52c1e190-50fe-4124-b9d5-c2949497e3a9)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+![Screenshot 2024-07-22 232227](https://github.com/user-attachments/assets/dbc92901-725d-4b67-84b0-a32a0f7394f8)
+## Features
 
-### Making a Progressive Web App
+- Ai assistent chatbot
+- Live previews
+- Fullscreen mode
+- Cross platform
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+## Tech Stack
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+**Client:** React, Redux
 
-### Deployment
+**Server:** Node, Express
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
+## Run Locally
 
-https://job-portel.netlify.app/
+Clone the project
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# job-portel
->>>>>>> f1ea196b30f24bae46e525248e04fdff8a234f76
+```bash
+  git clone https://link-to-project
+```
+
+Go to the project directory
+
+```bash
+  cd my-project
+```
+
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run start
+```
+
+
+## Demo
+
+
+Check out our live demo of Job Portel here: https://job-portel.netlify.app/
+
